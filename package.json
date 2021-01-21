@@ -1,7 +1,7 @@
 {
-  "name": "contracts",
+  "name": "yfiag-contracts",
   "version": "1.0.0",
-  "description": "Default",
+  "description": "YAgnostic secure vaults",
   "directories": {
     "test": "test"
   },
