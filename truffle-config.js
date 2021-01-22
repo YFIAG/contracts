@@ -18,7 +18,10 @@
  *
  */
 
-const { toHex, toWei } = require("web3-utils");
+const {
+  toHex,
+  toWei
+} = require("web3-utils");
 require('dotenv').config();
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 // const infuraKey = "fj4jll3k.....";
@@ -56,19 +59,19 @@ module.exports = {
     },
     kovan: {
       provider: () => new HDWalletProvider(process.env.DEV_MNEMONIC, "https://kovan.infura.io/v3/" + process.env.INFURA_ID),
-      networkId: 42,       // Kovan's id
+      networkId: 42, // Kovan's id
       network_id: 42,
       gasPrice: process.env.GAS_PRICE,
     },
     rinkeby: {
       provider: () => new HDWalletProvider(process.env.DEV_MNEMONIC, "https://rinkeby.infura.io/v3/" + process.env.INFURA_ID),
-      networkId: 4,       // Rinkeby's id
+      networkId: 4, // Rinkeby's id
       network_id: 4,
       gasPrice: process.env.GAS_PRICE,
     },
     mainnet: {
       provider: () => new HDWalletProvider(process.env.DEV_MNEMONIC, "https://mainnet.infura.io/v3/" + process.env.INFURA_ID),
-      networkId: 1,       // Mainnet's id
+      networkId: 1, // Mainnet's id
       network_id: 1,
       gasPrice: process.env.GAS_PRICE,
     },
@@ -81,15 +84,16 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      // version: "0.5.1",    // Fetch exact version from solc-bin (default: truffle's version)
+      version: "0.6.12", // Fetch exact version from solc-bin (default: truffle's version)
       // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
-      // settings: {          // See the solidity docs for advice about optimization and evmVersion
-      //  optimizer: {
-      //    enabled: false,
-      //    runs: 200
-      //  },
-      //  evmVersion: "byzantium"
-      // }
+      settings: { // See the solidity docs for advice about optimization and evmVersion
+        optimizer: {
+          enabled: true,
+          runs: 200
+        },
+        //  evmVersion: "byzantium"
+        // }
+      }
     }
   }
-};
+}
