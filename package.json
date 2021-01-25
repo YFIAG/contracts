@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "npx truffle compile",
-    "ganache": "npx ganache-cli --gasLimit 0xfffffffffff -e 10000000 --port 8545",
+    "ganache": "npx ganache-cli -q --gasLimit 0xfffffffffff -e 10000000 --port 8545",
     "test": "npx truffle test",
     "deploy": "npx truffle migrate",
     "dev:lint": "npx eslint . && npx solhint contracts/*.sol",
@@ -19,6 +19,7 @@
     "dev:coverage": "npx truffle run coverage"
   },
   "dependencies": {
+    "@openzeppelin/contracts": "^3.3.0",
     "@truffle/hdwallet-provider": "^1.2.1",
     "dotenv": "^8.2.0",
     "truffle": "^5.1.62",
