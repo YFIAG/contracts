@@ -99,7 +99,7 @@ describe('BreakerAsset: Destroy address', () => {
     it('Getters ...', async() => {
       //getPricePerFullShare
     });
-    
+
   });
 
 
