@@ -5,7 +5,7 @@ const {
   randomNumber,
   randomAddress,
   web3
-} = require('../../../utils/test');
+} = require('../../utils/test');
 
 const YVault = artifacts.require('yVault');
 const Controller = artifacts.require("Controller");
@@ -55,7 +55,7 @@ describe('BreakerAsset: Destroy address', () => {
 
   xdescribe('Test default values (constructors)', () => {
 
-    it('Define ...)', async() => {
+    it('Define ...', async() => {
 
     });
 
