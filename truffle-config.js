@@ -51,7 +51,7 @@ module.exports = {
       skipDryRun: true,
     },
     soliditycoverage: {
-      host: "localhost",
+      host: "127.0.0.1",
       network_id: "*",
       port: "8545",
       gas: 0xfffffffffff,
